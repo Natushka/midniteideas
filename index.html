@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="description" content="Description" />
+<meta name="keywords" content="keywords" />
+<meta name="author" content="Natalia Aguero" />
+<meta charset="utf-8" />
+
+<!--[if lt IE 11]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script src="js/my_scripts.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="https://cdn.rawgit.com/behance/be.js/master/be.js"></script>
+<script src="js/classie.js"></script>
+<link rel="stylesheet" type="text/css" href="css/elastic_grid.min.css" />
+<script type="text/javascript" src="js/elastic_grid.encode.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="shortcut icon" href="images/loguito.png">
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0,user-scalable=0">
+
+
+<title>Midnite ideas </title>
+</head>
+<body>
+<div id="main-wrapper">
+   <header>	
+		<h1 id="logo">
+			<a href="index.html" title="Home">
+			</a>
+			<span>Midnights Ideas Design</span>
+		</h1>
+		<img src="images/icon.png" id="icono-menu">
+		<nav>
+			<ul>
+				<li>
+					<a href="#home">HOME</a>
+				</li>
+				<li>
+					<a href="#aboutme">ABOUT ME</a>
+				</li>
+				<li>
+					<a href="#mywork">MY WORK</a>
+				</li>
+				<li>
+					<a href="#contactme">CONTACT ME</a>
+				</li>
+			</ul>
+		</nav>
+   
+	</header>
+	<section>
+		<article id="home">
+			<div class="cuadro">
+			<h2>
+				"Design is the silent ambassador of your brand"
+				<br>
+
+				<span>Paul Rand</span>
+			</h2>
+			</div>
+		</article>
+		<article id="aboutme">
+			<div class="opacidad">
+
+			<h2>
+			ABOUT ME
+			</h2>
+			
+			<p>
+				
+			Hello and welcome to my online place.<b> I'm Natalia</b> a <b> web and graphic designer</b> with base in <b>Montevideo,Uruguay</b>.   I love every step in the conception of a design, from the initial creative process,through the final deployment of the project.
+			<br>
+			My function is to create an <b> appropriate combination between design and usability</b> to help you to <b>communicate your message</b>, develope your corporate identity and create an original web concept to improve you on-line presence.
+			<br>
+			<b>Available for freelance work.</b>
+			</p>
+			
+		</article>
+		<div class= "about">
+			<h3>
+			Please feel free to drop me a line,it is nice to listen to new ideas.
+			Thanks for visiting my online place!
+			</h3>
+
+		</div>
+		<article id="mywork">
+			<h2>
+				MY WORK
+			</h2>
+			<ul id="myworks">
+				
+			</ul>
+			
+
+			
+		</article>
+		<article id="contactme">
+			<h2>
+				CONTACT ME
+			</h2>
+			<p>
+				Interested in working together? Please send me an email with some details about your project. Even if it is a specific or complex requirement I’m always interested in listening to new projects. 
+			</p>
+			<h3>naguerop@gmail.com</h3>
+		
+		</article>
+		<article id="social_network">
+			
+			<a target="_blank" href="https://www.facebook.com/natushka.aguero"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://twitter.com/Natushka_"><span class="fa fa-twitter"></span></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/naguerop"><span class="fa fa-linkedin"></span></a>
+                    <a target="_blank" href="https://github.com/Natushka"><span class="fa fa-github"></span></a>
+                    <a target="_blank" href="https://www.behance.net/natush"><span class="fa fa-behance-square"></span></a>
+		</article>
+
+	
+	</section>
+
+	<footer>
+		
+		<p>
+		© 2014 Midnite ideas. All rights reserved.
+		</p>
+	</footer>
+
+</div>
+
+</body>
+<script>
+
+be("0UB0QnCN7WvOEdALcmChZLTTXr66GH38").user.projects("natush").then(function(data) {
+    $.each(data.projects, function(i, project) {
+        var li = $("<li>");
+        var img = $("<img>").attr("src", project.covers["230"]);
+        var anchor = $("<a>").attr({
+            "href": project.url,
+            "target": "_blank"
+        });
+        
+        anchor.append(img);
+        li.append(anchor);
+        
+        $("#myworks").append(li);
+    })
+})
+
+</script>
+</html>
